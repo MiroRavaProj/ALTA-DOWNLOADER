@@ -12,6 +12,7 @@ This program will help you download all films up to 4K resolution
 7. Close your settings and account, you are now set to go
 
 ## Application settings
-### Open App.pyw 
+### Open App.exe or App.pyw
 1. Insert your newly created Gmail and also the token you saved before
 the above step needs to be done only the first time you use the application, or when you want to change your email (you will need to regenerate the token also in this case)
+2. Explore the App!!
