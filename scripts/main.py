@@ -103,11 +103,9 @@ if __name__ == '__main__':
 
     one_day_button.click()
     register.click()
-    print("\r", end="")
-    print("---DONE---")
     print("Logging In:\nPlease Wait 30 seconds:", end="")
     time.sleep(15)
-    mailbox = MailBox('imap.gmail.com').login('robertoabregnoneteam@gmail.com', 'awvmfaajlppkckof')
+    mailbox = MailBox('imap.gmail.com').login(config["email"], config["token"])
     uid = 0
     urls = []
     for msg in mailbox.fetch():
@@ -143,8 +141,6 @@ if __name__ == '__main__':
         film_list = file.read().splitlines()
     dictionary = {}
     if len(film_list) != 0 and config["headless"] == "True":
-        print("\r", end="")
-        print("----DONE----")
         print("Starting Downloads:\nPlease Wait 15 seconds:", end="")
         with progress:
             with ThreadPoolExecutor() as pool:
@@ -179,8 +175,6 @@ if __name__ == '__main__':
                     except selenium.common.exceptions.NoSuchElementException:
                         pass
                     time.sleep(3)
-                print("\r", end="")
-                print("----DONE----")
                 alta.quit()
     else:
         while True:
